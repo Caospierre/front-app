@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  apiPath: 'https://caospierre-mega-spring-boot.herokuapp.com/api',
+
+
 };

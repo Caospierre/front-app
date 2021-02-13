@@ -1,0 +1,31 @@
+<img class="wave" src="./assets/img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="./assets/img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form  [formGroup]="loginForm"  (ngSubmit)="onLogin()" >
+				<img src="./assets/img/avatar.svg">
+				<h2 class="title">Iniciar Sesion</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<input type="text" placeholder="Usuario" class="input"  (keyup)="keyAcion($event)" minlength="4" maxlength="8"   pattern="[a-z]{1,8}"  formControlName="username" #myNameElem>
+        		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<input type="password"  placeholder="Contraseña" class="input"  formControlName="password">
+            	   </div>
+            	</div>
+            	<input type="submit" class="okbutton" value="Entrar">
+                <button class="otherbutton" [routerLink]="['/register']">Registro</button>
+
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,88 @@
+<img class="wave" src="./assets/img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="./assets/img/ig.svg">
+		</div>
+		<div class="login-content">
+			<form [formGroup]="registerForm"    (ngSubmit)="onRegister()">
+				<img src="./assets/img/profile.svg">
+				<h2 class="title">Crear Cuenta</h2>
+
+                <div class="input-div one">
+                    <div class="i">
+                            <i class="far fa-id-card"></i>
+                    </div>
+                    <div class="div">
+                        
+                            <input type="text" class="input" placeholder="Identificacíon"  minlength="4" maxlength="10" formControlName="dni" (keypress)="validateInputDNI($event)" >
+                    </div>
+                 </div>
+
+           	<div class="input-div one">
+           		<div class="i">
+           		   	<i class="fas fa-user"></i>
+           		 </div>
+           		 <div class="div">
+           		   	<input type="text" placeholder="Nombre" class="input"  formControlName="name">
+           		 </div>
+                      
+           	</div>
+
+                <div class="input-div one">
+
+                    <div class="i">
+                            <i class="fab fa-odnoklassniki"></i>
+                    </div>
+
+                    <div class="div">
+                            <input  placeholder="Usuario"    class="username-input" (keyup)="keyAcion($event)" type="text" class="input"  minlength="4" maxlength="8"  formControlName="username" #myNameElem >
+                    </div>
+                 </div>   
+
+                <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-star-of-life"></i>
+                    </div>
+
+                    <div class="div">
+                            <input type="number" placeholder="Edad" class="input"  formControlName="age"  (keypress)="validateInputAGE($event)" >
+                    </div>
+
+                </div>  
+
+           	<div class="input-div pass">
+           	   <div class="i"> 
+           	    	<i class="fas fa-lock"></i>
+           	   </div>
+           	
+                   <div class="div">
+  		    	<input type="password" placeholder="Contraseña" class="input"  formControlName="password">
+            	   </div>
+            	</div>
+
+                <div class="input-div pass">
+                    <div class="i"> 
+                         <i class="fas fa-lock"></i>
+                    </div>
+
+                    <div class="div">
+                         <input type="password" placeholder="Repetir Contraseña" class="input"  formControlName="repeatPassword" >
+                 </div>
+              </div>
+
+              <div class="input-div one">
+                <div class="i">
+                        <i class="fas fa-city"></i>
+                </div>
+
+                <div class="div">
+                        <input type="text" placeholder="Ciudad" class="input"  formControlName="city">
+                </div>
+             </div>  
+
+            	<input type="submit" class="okbutton" value="Registrarse">
+                <button class="otherbutton" [routerLink]="['/login']">Iniciar Sesion</button>
+
+            </form>
+        </div>
+    </div>

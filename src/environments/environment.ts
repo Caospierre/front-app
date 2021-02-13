@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiPath: 'https://caospierre-mega-spring-boot.herokuapp.com/api',
+  //apiPath: 'http://localhost:8080/api',
+
 };
 
 /*
